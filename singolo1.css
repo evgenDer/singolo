@@ -11,36 +11,4 @@ header{
     height: 89px;
     background-color: #2d303a;
     border-bottom-color: #323746;
-
-}
-nav{
-    float:right;
-}
-nav li{
-    font-size: 12px;
-    line-height: 6px;
-    font-family: "Lato";
-    font-weight: 700;
-    display: inline-block;
-}
-
-.logo{
-    float: left;
-    font-size: 25px;
-    line-height: 6px;
-    color: #ffffff;
-    font-family: "Lato";
-    font-weight: 700;
-    text-align: left;
-}
-.services{
-    display: inline;
-    font-size: 12px;
-    line-height: 6px;
-    font-family: "Lato";
-    font-weight: 700;
-    list-style:none;
-}
-.services a{
-
 }
