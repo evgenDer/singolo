@@ -71,8 +71,60 @@ header {
     background: #dda0dd;
 }
 
-#active-nav {
+#active-line {
     color: #f06c64;
 }
- 
+
+.slider-block{
+    margin-top:95px;
+    width: 1020px;
+    top: 0;
+    position: fixed;
+    background: #f06c64;
+    height: 600px;
+    border-bottom: 15px solid #ea676b;
+}
+.left-arrow{
+   /*margin-left: 40px;*/
+    padding-left: 40px;
+    margin-top: 281px;
+    margin-bottom:292px;
+    vertical-align: center;
+
+}
+.right-arrow{
+    margin-top: 281px;
+    margin-bottom:292px;
+    margin-right:40px;
+    vertical-align: center;
+}
+
+.shadow-vert{
+    box-shadow: 26px 26px 2px #cf5c55;
+    
+    
+}
+.shadow-horiz{
+    box-shadow: 26px 26px 2px #cf5c55;
+}
+.vert-iphone{
+    margin-top: 48px;
+    margin-left: 52px;
+    margin-right: 96px;
+    border-radius: 27px;
+    margin-bottom: 89px;
+}
+.horiz-iphone{
+    margin-right: 77px;
+    margin-top: 165px;
+    margin-bottom:212px;
+    border-radius: 27px;
+}
+
+
+
+
+
+
+
 
