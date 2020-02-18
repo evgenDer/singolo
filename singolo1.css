@@ -1,6 +1,6 @@
 * {
     font-family: 'Lato', sans-serif;
-    letter-spacing: normal;
+    letter-spacing:normal;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -12,6 +12,7 @@ body {
 
 header {
     top: 0;
+    letter-spacing: -1px;
     position: fixed;
     background: #2d303a;
     width: 1020px;
@@ -20,6 +21,7 @@ header {
 }
 
 #logo {
+    letter-spacing: -1px;
     float: left;
     position: absolute;
     height: 20px;
@@ -32,8 +34,9 @@ header {
     align-items: center;
     text-transform: uppercase;
     color: white;
-    margin-left: 40px;
+    margin-left: 39.3px;
     margin-top: 34px;
+    font-weight: 700;
     margin-bottom: 35px;
 }
 
@@ -42,33 +45,46 @@ header {
 }
 
 .header-nav {
-    margin: 20px;
+    margin: 40px;
 }
-
 .navigation {
+    letter-spacing: -1px;
     text-transform: uppercase;
-    overflow: hidden;
     font-size: 12px;
     line-height: 6px;
     font-weight: 700;
+    text-align: right;
+    margin-bottom: 35px;
+    margin-top: 46px;
 }
 
 .navigation li {
-    float: right;
-    list-style-type: none;
+   
+    display: inline;
+    /*list-style-type: none;*/
+    color: white;
+    padding-left: 10.4px;
+}
+/*li:before{
+    color: #323746;
+    content:"";
+    
+}*/
+
+#list{
+    color: darkslategrey;
 }
 
 .navigation li a {
-    display: block;
     color: white;
-    text-align: center;
-    padding: 20px;
+    
+    text-align: left;
     text-decoration: none;
 }
 
 .navigation li a:hover {
     cursor: pointer;
-    background: #dda0dd;
+    text-decoration: line-through;
 }
 
 #active-line {
@@ -79,7 +95,7 @@ header {
     margin-top:95px;
     width: 1020px;
     top: 0;
-    position: fixed;
+    /*position: relative;*/
     background: #f06c64;
     height: 600px;
     border-bottom: 15px solid #ea676b;
@@ -90,13 +106,20 @@ header {
     margin-top: 281px;
     margin-bottom:292px;
     vertical-align: center;
+   
 
 }
 .right-arrow{
+   
     margin-top: 281px;
     margin-bottom:292px;
     margin-right:40px;
     vertical-align: center;
+}
+
+.slider-block .right-arrow:hover, .slider-block .left-arrow:hover {
+    cursor: pointer;
+    filter: brightness(10);
 }
 
 .shadow-vert{
@@ -116,10 +139,102 @@ header {
 }
 .horiz-iphone{
     margin-right: 77px;
-    margin-top: 165px;
+    margin-top: 170px;
     margin-bottom:212px;
     border-radius: 27px;
 }
+
+.services-block{
+    padding-left: 40px;
+    top: 695px;
+    bottom:1196px;
+    position: absolute;
+    width: 1020px;
+    height: 501px;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+    
+}
+
+.services-block h2{
+    margin-right: 40px;
+    padding-top: 68px;
+    padding-bottom: 28px;
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+}
+
+.services-block p{
+    /*margin-right: 40px;*/
+    white-space: nowrap;
+    height:57px;
+    width: 940px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: left;
+  
+}
+
+.services-container{
+    text-align: justify;
+    letter-spacing: -0.7px; 
+    margin-top: 47px;
+    margin-bottom:40px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 105px 105px;
+    grid-row-gap: 18px;
+    grid-column-gap: 20px;
+}
+
+.grid-item{
+    display: grid;
+    grid-template-columns: 59px 220px;;
+    grid-template-rows: 18px 54px;
+    grid-row-gap: 9.4px;
+    grid-column-gap: 20px;
+    text-align: justify;
+    white-space: nowrap;
+}
+
+.grid-item img{
+    width: 59px;
+    height: 59px;
+    border-radius: 29px;
+}
+
+.grid-item h3{
+    
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: justify;
+grid-auto-flow: row;
+}
+
+.grid-item p {
+    grid-column: 2;
+    width: 219px;
+    height: 128px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+
+
 
 
 
