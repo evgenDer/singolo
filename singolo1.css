@@ -12,8 +12,7 @@ body {
 
 header {
     top: 0;
-    letter-spacing: -1px;
-    position: fixed;
+    position: absolute;
     background: #2d303a;
     width: 1020px;
     height: 95px;
@@ -21,23 +20,21 @@ header {
 }
 
 #logo {
-    letter-spacing: -1px;
     float: left;
     position: absolute;
     height: 20px;
-    font-family: Lato;
     font-style: normal;
     font-weight: bold;
     font-size: 25px;
     line-height: 6px;
-    display: flex;
-    align-items: center;
     text-transform: uppercase;
     color: white;
-    margin-left: 39.3px;
-    margin-top: 34px;
-    font-weight: 700;
+    /*letter-spacing:-0.7px;*/
+    letter-spacing: -0.028em;
+    margin-left: 40px;
+    margin-top: 41.2px;
     margin-bottom: 35px;
+      
 }
 
 #logo span {
@@ -48,14 +45,14 @@ header {
     margin: 40px;
 }
 .navigation {
-    letter-spacing: -1px;
+    letter-spacing: -0.026em;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 6px;
     font-weight: 700;
     text-align: right;
     margin-bottom: 35px;
-    margin-top: 46px;
+    margin-top: 47px;
 }
 
 .navigation li {
@@ -63,7 +60,7 @@ header {
     display: inline;
     /*list-style-type: none;*/
     color: white;
-    padding-left: 10.4px;
+    padding-left: 10px;
 }
 /*li:before{
     color: #323746;
@@ -113,7 +110,7 @@ header {
    
     margin-top: 281px;
     margin-bottom:292px;
-    margin-right:40px;
+    margin-right: 40px;
     vertical-align: center;
 }
 
@@ -132,20 +129,21 @@ header {
 }
 .vert-iphone{
     margin-top: 48px;
-    margin-left: 52px;
-    margin-right: 96px;
+    margin-left: 51px;
+    margin-right: 94px;
     border-radius: 27px;
     margin-bottom: 89px;
 }
 .horiz-iphone{
     margin-right: 77px;
-    margin-top: 170px;
-    margin-bottom:212px;
+    margin-top: 169.5px;
+    margin-bottom:211px;
     border-radius: 27px;
 }
 
 .services-block{
     padding-left: 40px;
+    padding-right: 40px;
     top: 695px;
     bottom:1196px;
     position: absolute;
@@ -157,7 +155,7 @@ header {
 }
 
 .services-block h2{
-    margin-right: 40px;
+    padding-right: 40px;
     padding-top: 68px;
     padding-bottom: 28px;
     font-size: 30px;
@@ -165,11 +163,12 @@ header {
     color: #666d89;
     font-family: "Lato";
     font-weight: 900;
-    text-align: left;
+    /*text-align: left;*/
 }
 
 .services-block p{
-    /*margin-right: 40px;*/
+    letter-spacing: -0.0029em;
+    padding-right: 40px;
     white-space: nowrap;
     height:57px;
     width: 940px;
@@ -178,24 +177,24 @@ header {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
-    text-align: left;
+    /*text-align: left;*/
   
 }
 
 .services-container{
-    text-align: justify;
     letter-spacing: -0.7px; 
-    margin-top: 47px;
-    margin-bottom:40px;
+    padding-top: 47px;
+    padding-bottom:40px;
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 105px 105px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
     grid-row-gap: 18px;
     grid-column-gap: 20px;
 }
 
 .grid-item{
     display: grid;
+    margin: 0 auto;
     grid-template-columns: 59px 220px;;
     grid-template-rows: 18px 54px;
     grid-row-gap: 9.4px;
@@ -218,10 +217,11 @@ header {
     font-family: "Lato";
     font-weight: 900;
     text-align: justify;
-grid-auto-flow: row;
+    grid-auto-flow: row;
 }
 
 .grid-item p {
+    overflow : hidden;
     grid-column: 2;
     width: 219px;
     height: 128px;
@@ -229,7 +229,7 @@ grid-auto-flow: row;
     line-height: 22px;
     color: #767e9e;
     font-weight: 400;
-    margin: 0px;
+    margin: 0px auto;
     padding: 0px;
     text-align: justify;
 }
