@@ -156,8 +156,8 @@ header {
 
 .services-block h2{
     padding-right: 40px;
-    padding-top: 68px;
-    padding-bottom: 28px;
+    padding-top: 69px;
+    padding-bottom: 29px;
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
@@ -168,39 +168,38 @@ header {
 
 .services-block p{
     letter-spacing: -0.0029em;
-    padding-right: 40px;
-    white-space: nowrap;
     height:57px;
+    margin-top:-3px;
     width: 940px;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
-    /*text-align: left;*/
-  
+    text-align: left;  
 }
 
 .services-container{
-    letter-spacing: -0.7px; 
-    padding-top: 47px;
+    letter-spacing: -0.1px ;
+    padding-top: 50px;
     padding-bottom:40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
-    grid-row-gap: 18px;
-    grid-column-gap: 20px;
+    grid-row-gap: 22.5px;
+    grid-column-gap: 18px;
+    text-align: justify;
 }
 
 .grid-item{
+    
     display: grid;
     margin: 0 auto;
     grid-template-columns: 59px 220px;;
-    grid-template-rows: 18px 54px;
-    grid-row-gap: 9.4px;
+    grid-template-rows: 18px 50px;
+    grid-row-gap: 9.8px;
     grid-column-gap: 20px;
     text-align: justify;
-    white-space: nowrap;
 }
 
 .grid-item img{
@@ -210,17 +209,18 @@ header {
 }
 
 .grid-item h3{
-    
+    letter-spacing: -0.1px; 
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
     font-family: "Lato";
     font-weight: 900;
-    text-align: justify;
+    text-align: left;
     grid-auto-flow: row;
 }
 
 .grid-item p {
+    letter-spacing: -0.08px;
     overflow : hidden;
     grid-column: 2;
     width: 219px;
@@ -230,8 +230,8 @@ header {
     color: #767e9e;
     font-weight: 400;
     margin: 0px auto;
-    padding: 0px;
     text-align: justify;
+    justify-content: center;
 }
 
 
