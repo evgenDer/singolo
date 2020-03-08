@@ -204,7 +204,7 @@ header {
 .services-container{
     letter-spacing: -0.1px ;
     padding-top: 49px;
-    padding-bottom:40px;
+    padding-bottom:38px;
     display: grid;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 96px 96px;
@@ -306,14 +306,13 @@ header {
     cursor: pointer;
     background-color: #0f0f0f;;
 }
-.button_active{
-    color:white;
-}
+
 .portfolio__buttons button:first-child{
     padding-left: 7.5px;
     margin-right: 6px;
     width: 29px;  
-    color: white;  
+    color:white;
+    border-color: white;
 }
 
 .portfolio__buttons button:nth-child(2){
