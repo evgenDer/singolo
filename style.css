@@ -312,7 +312,8 @@ header {
 .portfolio__buttons button:first-child{
     padding-left: 7.5px;
     margin-right: 6px;
-    width: 29px;    
+    width: 29px;  
+    color: white;  
 }
 
 .portfolio__buttons button:nth-child(2){
@@ -340,7 +341,7 @@ header {
     display: grid;
     grid-template-columns: 220px 220px 220px 220px;
     grid-template-rows: 187px 187px 187px;
-    grid-row-gap: 19.5px;
+    grid-row-gap: 20px;
     grid-column-gap: 20px;
     text-align: justify;
 }
@@ -383,7 +384,7 @@ header {
     display: grid;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 375px 32px;
-    grid-row-gap: 31px;
+    grid-row-gap: 35px;
     grid-column-gap: 19.6px;
     
     
@@ -400,7 +401,7 @@ header {
     font-weight: 900;
     text-align: left;
     height: 19px;
-    margin-bottom: 5px;
+    margin-bottom: 9px;
     width:300px;
 }
 .about-us__grid-container img{
@@ -468,20 +469,16 @@ header {
 
 }
 textarea::-webkit-input-placeholder{
-    color: #f0d8d9;
+    color: #f48c8f;
     letter-spacing: -0,5px;
     font-family: "Lato";
 }
 
 input::-webkit-input-placeholder{
-    color: #f0d8d9;
+    color: #f48c8f;
     letter-spacing: -0.5px;
     font-family: "Lato";
 }
-
-
-
-
 
 .form__textarea{
     height: 202px;
@@ -495,6 +492,7 @@ input::-webkit-input-placeholder{
     color: #f0d8d9;
     margin-bottom: 12px;
     outline: none;
+    resize: none;
 }
 
 .form__element{

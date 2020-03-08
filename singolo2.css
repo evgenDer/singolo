@@ -27,19 +27,6 @@ h3{
     font-weight: 300;
     text-align: left;}
 
-button{
-    padding-top: 0px;
-    border-radius: 5px;
-    border: 1px solid #666d89;
-    color: #767e9e;
-    line-height: 22px;
-    height: 22px;
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-align: left;
-    padding-left: 4px;
-    background-color: #2d303a;
-}
     
 .portfolio{
     width: 1020px;
@@ -50,6 +37,7 @@ button{
 .wrapper {
     width: 1020px;
     margin: auto;
+    
  }
 
 
@@ -74,20 +62,33 @@ button{
     
 }
 
-button:hover{
+.portfolio__buttons button{
+    padding-top: 0px;
+    border-radius: 5px;
+    border: 1px solid #666d89;
+    color: #767e9e;
+    line-height: 22px;
+    height: 22px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 4px;
+    background-color: #2d303a;
+}
+.portfolio__buttons button:hover{
     cursor: pointer;
     background-color: #0f0f0f;;
 }
 .button_active{
     color:white;
 }
-button:first-child{
+.portfolio__buttons button:first-child{
     padding-left: 7.5px;
     margin-right: 6px;
     width: 29px;    
 }
 
-button:nth-child(2){
+.portfolio__buttons button:nth-child(2){
     letter-spacing: -0.1px;
     padding-left:7px;
     padding-right:2px;
@@ -95,14 +96,14 @@ button:nth-child(2){
     margin-right: 5px;
 }
 
-button:nth-child(3){
+.portfolio__buttons button:nth-child(3){
     padding-left: 5px;
     letter-spacing: -0.2px;
     margin-right: 4.5px;
     width: 94px;
 }
 
-button:nth-child(4){
+.portfolio__buttons button:nth-child(4){
     padding-left: 5px;
     width: 57px;
     letter-spacing: 0.6px;
