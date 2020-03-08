@@ -623,8 +623,9 @@ input::-webkit-input-placeholder{
 }
 
 .social-media__icons img:hover{
+    width:32px;
+    height:32px;
     border-radius: 16px;
-    width:30px;
     background-color:lightgrey;
 }
 
