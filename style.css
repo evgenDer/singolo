@@ -105,7 +105,7 @@ header {
     color: darkslategrey;
 }
 
-#menu li.active {
+#menu .active {
     color: #f06c64;
 }
 #menu li:not(.active):hover {
@@ -633,9 +633,9 @@ input::-webkit-input-placeholder{
     background-color:lightgrey;
 }
 
-#message-block:hidden{
+/*#message-block:hidden{
     
-}
+}*/
 
 
 
