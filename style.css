@@ -37,7 +37,7 @@ h3{
 
 header {
     top: 0;
-    position: absolute;
+    position: fixed;
     background: #2d303a;
     width: 1020px;
     height: 95px;
@@ -74,7 +74,7 @@ header {
     color: #f06c64;
 }
 
-.navigation {
+#menu {
     letter-spacing: -0.026em;
     text-transform: uppercase;
     font-size: 12px;
@@ -83,34 +83,37 @@ header {
     text-align: right;
     margin-bottom: 35px;
     margin-top: 47px;
+    
+    
+}
+#menu li a {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+                            
 }
 
-.navigation li {
-   
+#menu li {
+    color: white;
     display: inline;
     /*list-style-type: none;*/
-    color: white;
     padding-left: 10px;
+    
 }
 
-.list{
+#menu .list{
     color: darkslategrey;
 }
 
-.navigation li a {
-    color: white;
-    text-align: left;
-    text-decoration: none;
-}
-
-.navigation li a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-#active-line {
+#menu li.active {
     color: #f06c64;
 }
+#menu li:not(.active):hover {
+    cursor: pointer;
+    text-decoration: underline;
+    /* color: #f06c64;*/
+}
+
 
 .slider-block{
     margin-top:95px;
@@ -304,7 +307,8 @@ header {
 }
 .portfolio__buttons button:hover{
     cursor: pointer;
-    background-color: #0f0f0f;;
+    background-color: #0f0f0f;
+    border-radius: 5px;
 }
 
 .portfolio__buttons button:first-child{
@@ -629,7 +633,9 @@ input::-webkit-input-placeholder{
     background-color:lightgrey;
 }
 
-
+#message-block:hidden{
+    
+}
 
 
 

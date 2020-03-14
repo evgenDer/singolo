@@ -9,21 +9,22 @@
     <header>
         <h1 class="logo">Singolo<span>*</span></h1>
         <nav class="header-nav">
-            <ul class="navigation">
-                <li><a href="#" id="active-line">Home</a></li>
+            <ul class="navigation" id="menu">
+                <li  class="active" ><a href="#slider" >Home</a></li>
                 <li class="list">&middot;</li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#services">Services</a></li>
                 <li class="list">&middot;</li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li class="list">&middot;</li>
-                <li><a href="#">About</a></li>
+                <li><a href="#about">About</a></li>
                 <li class="list">&middot;</li>
-                <li><a href="#">Contact</a></li>                                                     
+                <li><a href="#contact">Contact</a></li>                                                     
             </ul>
+            <script src="script.js"></script>
         </nav>
     </header>
     <main>
-        <section class="slider-block">
+        <section class="slider-block" id="slider">
           <div class="wrapper">
             <img src="assets/images/left.png" class="left-arrow">
             <img src="assets/images/vertical_iphone.png" class="shadow-vert vert-iphone">
@@ -31,7 +32,7 @@
             <img src="assets/images/right.png" class="right-arrow">
         </div>
         </section>
-        <section class="services-block">
+        <section class="services-block" id="services">
             <div class ="wrapper">
             <h2>Our Services</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
@@ -72,7 +73,7 @@
             </div>
         </section>
       </div>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="wrapper">
                 <div class="portfolio_content">
                 <h2 style="letter-spacing: 0.013px;">Portfolio</h2>
@@ -102,7 +103,7 @@
              </div>
             </div>
         </section>
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="wrapper">
                 <h2>About Us</h2>
                 <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo,<text style="letter-spacing: -0.02px;"> tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget</text><text style="letter-spacing: -0.3px;"> lacinia odio sem nec elit.
@@ -148,7 +149,7 @@
                 </div>
             </div>
         </section>
-        <section class="get-quote">
+        <section class="get-quote" id="contact">
             <div class="wrapper">
                 <div class="get-quote_content">
                 <h2>Get a Quote</h2>
