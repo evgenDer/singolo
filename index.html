@@ -1,58 +1,67 @@
 <!DOCTYPE html> 
 <html lang="en"> 
+<html lang="ru"> 
 <head> 
-<meta chrset="utf-8"> 
+<meta charset="utf-8"> 
 <link href="assets/fonts/fonts.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 </head>
-<body> 
+<body>
     <header>
+        
         <h1 class="logo">Singolo<span>*</span></h1>
         <nav class="header-nav">
             <ul class="navigation" id="menu">
                 <li  class="active"><a href="#slider">Home</a></li>
-                <li class="list">&middot;</li>
-                <li><a href="#services">Services</a></li>
-                <li class="list">&middot;</li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li class="list">&middot;</li>
-                <li><a href="#about">About</a></li>
-                <li class="list">&middot;</li>
-                <li><a href="#contact">Contact</a></li>                                                     
-            </ul>
-            <script src="script.js"></script>
+                <span class="list">&middot;</li>
+                    <li><a href="#services">Services</a></li>
+                    <span class="list">&middot;</li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <span class="list">&middot;</li>
+                            <li><a href="#about">About</a></li>
+                            <span class="list">&middot;</li>
+                                <li><a href="#contact">Contact</a></li>                                                     
+                            </ul>
+                            
         </nav>
     </header>
     <main>
         <section class="slider-block" id="slider">
-          <div class="wrapper">
-            <img src="assets/images/left.png" class="left-arrow">
-            <img src="assets/images/vertical_iphone.png" class="shadow-vert vert-iphone">
-            <img src="assets/images/horizontal_iphone.png" class="shadow-horiz horiz-iphone">
-            <img src="assets/images/right.png" class="right-arrow">
-        </div>
+            <div class="wrapper">
+				<img class="slider-block_arrows left-arrow "src="assets/images/left.png" onclick="changeSlide()">
+				<div class="slide slide_red">
+                    <img src="assets/images/vertical_iphone.png" class="slider-block-iphones shadow vert-iphone  slide_red" onclick="clickOnVertPhone()">
+                    <img src="assets/images/iPhone Vertical.png" class="slider-block-iphones shadow vert-iphone slide_red display-none" onclick="clickOnVertPhone()">
+                    <img src="assets/images/horizontal_iphone.png" class="slider-block-iphones shadow horiz-iphone  slide_red" onclick="clickOnHorizPhone()">
+                    <img src="assets/images/iPhone Horizontal.png" class="slider-block-iphones shadow horiz-iphone display-none slide_red" onclick="clickOnHorizPhone()">
+				</div>
+				<div class="slide display-none slide_blue">
+					<img src="assets/images/slide-2.png" class=>
+				</div>
+                <img class="slider-block_arrows right-arrow" src="assets/images/right.png" onclick="changeSlide()">
+			</div>
         </section>
         <section class="services-block" id="services">
             <div class ="wrapper">
-            <h2>Our Services</h2>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
-                <text style="letter-spacing: -0.24px;">ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
-                <div class="services-container">
-                    <div class="grid-item">
-                        <img src="assets/images/pen.png">
-                        <h3>Custom Design</h3>
-                        <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-                    </div>
-                    <div class="grid-item">
-                        <img src="assets/images/bulb.png">
-                        <h3>Inovative Ideas</h3>
+                <h2>Our Services</h2>
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
+                    <text style="letter-spacing: -0.24px;">ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
+                        <div class="services-container">
+                            <div class="grid-item">
+                                <img src="assets/images/pen.png">
+                                <h3>Custom Design</h3>
+                                <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                            </div>
+                            <div class="grid-item">
+                                <img src="assets/images/bulb.png">
+                                <h3>Inovative Ideas</h3>
                         <p>Quisque luctus, quam eget molestie com- modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     </div>
                     <div class="grid-item">
                         <img src="assets/images/heart.png">
                         <h3>Love Is The Answer</h3>
                         <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>   
-                     </div>
+                    </div>
                     <div class="grid-item">
                         <img src="assets/images/phone.png">
                         <h3>Responsive Layout</h3>
@@ -72,20 +81,21 @@
                 </div>
             </div>
         </section>
-      </div>
-        <section class="portfolio" id="portfolio">
-            <div class="wrapper">
-                <div class="portfolio_content">
+    </div>
+    <section class="portfolio" id="portfolio">
+        <div class="wrapper">
+            <div class="portfolio_content">
                 <h2 style="letter-spacing: 0.013px;">Portfolio</h2>
                 <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat <text style="letter-spacing: -0.18px">porttitor ligula, eget lacinia odio sem nec elit.</text></p>
-                <div class="portfolio__buttons">
+                <div class="portfolio__buttons" id="portfolio__buttons">
                     <button class="button_active">All</button>
                     <button>Web Design</button>
                     <button>Graphic Design</button>
                     <button>Artwork</button>
                 </div>
                 <div class="layout-4-column">
-                    <div class="portfolio__grid-container">
+                    <div id="portfolio_images">
+                        <div class="portfolio__grid-container">
                         <img src="assets/images/1.png">
                         <img src="assets/images/2.png">
                         <img src="assets/images/3.png">
@@ -100,32 +110,33 @@
                         <img src="assets/images/12.png">
                     </div>
                 </div>
-             </div>
             </div>
-        </section>
-        <section class="about-us" id="about">
-            <div class="wrapper">
-                <h2>About Us</h2>
-                <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo,<text style="letter-spacing: -0.02px;"> tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget</text><text style="letter-spacing: -0.3px;"> lacinia odio sem nec elit.
-                   Fusce dapibus, tellus ac cursus commado,</text><text style="letter-spacing: 0px;"> tortor mauris condimentum nibh.</text></p>
-                <div class="layot-4-column">
-                    <div class="about-us__grid-container">
-                        <div>
-                            <img src="assets/images/Adam.png" alt="Adam Jensen">
-                            <h3 class="about-us__text_name">Adam Jensen</h3>
-                            <p class="about-us__description" style="letter-spacing: -0.15px;">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+        </div>
+    </div>
+</section>
+<section class="about-us" id="about">
+    <div class="wrapper">
+        <h2>About Us</h2>
+        <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo,<text style="letter-spacing: -0.02px;"> tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget</text><text style="letter-spacing: -0.3px;"> lacinia odio sem nec elit.
+            Fusce dapibus, tellus ac cursus commado,</text><text style="letter-spacing: 0px;"> tortor mauris condimentum nibh.</text></p>
+            <div class="layot-4-column">
+                <div class="about-us__grid-container">
+                    <div>
+                        <img src="assets/images/Adam.png" alt="Adam Jensen">
+                        <h3 class="about-us__text_name">Adam Jensen</h3>
+                        <p class="about-us__description" style="letter-spacing: -0.15px;">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                         
-                        </div>
-                       <div>
+                    </div>
+                    <div>
                         <img src="assets/images/Desmond.png" alt="Desmond Miles">
                         <h3 class="about-us__text_name">Desmond Miles</h3>
                         <p class="about-us__description" style="letter-spacing: 0.12px;">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-                        </div>
-                        <div>
-                            <img src="assets/images/Scolara.png" alt="Scolara Visari">
+                    </div>
+                    <div>
+                        <img src="assets/images/Scolara.png" alt="Scolara Visari">
                         <h3 class="about-us__text_name" style="letter-spacing: 0.1px">Scolara Visari</h3>
                         <p class="about-us__description" style="letter-spacing: 0.07px;">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-                                             
+                        
                         </div>
                         <div class="social-media__icons">
                             <a href="#"><img src="assets/images/facebook.png"></a></li>
@@ -152,43 +163,52 @@
         <section class="get-quote" id="contact">
             <div class="wrapper">
                 <div class="get-quote_content">
-                <h2>Get a Quote</h2>
-                <p class="get-quote__text" >Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                 <div class="get-quote_grid-container">
-                <form class="get-quote__form"   action="#" method="post">
-                    <input class="form__element"  type="text" name="name" placeholder="Name (Required)" required>
-                    <input class="form__element" type="email" name="email" placeholder="Email (Required)" required>
-                    <input class="form__element" type="text" name="subject" placeholder="Subject">
-                    <textarea class="form__textarea" name="description"
-                      placeholder="Describe your project in detail..."></textarea>
-                    <p><button type="submit" class="get-quote__button">Submit</button></p>
-                </form>
-            
-                <div class="contact">
-                    <h3 class="contact_title">Contact information</h3>
-                    <p class ="contact_description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
-                    </p>
-                    <ul class="list_contact">
-                        <li><img src="assets/images/ico-location.png"><a class="icon_name_style">Elm St. 14/05 Lost City</a></li>
-                        <li><img src="assets/images/ico-phone.png"></span><a href="tel:035283318635" class="icon_name_style">03528 331 86 35</a></li>
-                        <li><img src="assets/images/ico-mail.png"></span><a href="mail:info@singolo.com" class="icon_name_style">info@singolo.com</a></li>
-                    </ul>
-                    
+                    <h2>Get a Quote</h2>
+                    <p class="get-quote__text" >Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                    <div class="get-quote_grid-container">
+                        <form class="get-quote__form" id="form" method="post">
+                            <input id="name" class="form__element"  type="text" name="name" placeholder="Name (Required)" required>
+                            <input id="email" class="form__element" type="email" name="email" placeholder="Email (Required)" required>
+                            <input class="form__element" type="text" name="subject" placeholder="Subject" id="subject"> 
+                            <textarea id="describe" class="form__textarea" name="description"
+                            placeholder="Describe your project in detail..."></textarea>
+                            <p><button id="btn" class="get-quote__button">Submit</button></p>
+                        </form>
+                        
+                        <div class="contact">
+                            <h3 class="contact_title">Contact information</h3>
+                            <p class ="contact_description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
+                            </p>
+                            <ul class="list_contact">
+                                <li><img src="assets/images/ico-location.png"><a class="icon_name_style">Elm St. 14/05 Lost City</a></li>
+                                <li><img src="assets/images/ico-phone.png"></span><a href="tel:035283318635" class="icon_name_style">03528 331 86 35</a></li>
+                                <li><img src="assets/images/ico-mail.png"></span><a href="mail:info@singolo.com" class="icon_name_style">info@singolo.com</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
             </div>
         </section>
+        <div id="message-block" class="display-none">
+            <div id="message">
+               <p>Письмо отправлено</p>
+               <p><span id="text-subject"></span></p>
+               <p><span id="text-describe"></span></p>
+               <button id="close_btn">OK</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
     </main>
     <footer class="footer">
         <div class="footer__wrapper">
-        <span class="footer__span">&copy; Copyright 2013</span>
-        <div class="social-media__icons">
-            <a href="#"><img src="assets/images/facebook.png"></a></li>
-            <a href="#"><img src="assets/images/google+.png"></a></li>
-            <a href="#"><img src="assets/images/twitter.png"></a></li>
-            <a href="#"><img src="assets/images/linkedin.png"></a></li>
-        </div>
+            <span class="footer__span">&copy; Copyright 2013</span>
+            <div class="social-media__icons">
+                <a href="#"><img src="assets/images/facebook.png"></a></li>
+                <a href="#"><img src="assets/images/google+.png"></a></li>
+                <a href="#"><img src="assets/images/twitter.png"></a></li>
+                <a href="#"><img src="assets/images/linkedin.png"></a></li>
+            </div>
         </div>
     </footer>
 </body> 

@@ -8,6 +8,7 @@
 
 html{
     font-size: 10px;
+    scroll-margin-top: 95px;
 }
 
 body{
@@ -101,76 +102,97 @@ header {
     
 }
 
+
+
 #menu .list{
     color: darkslategrey;
+    padding-left: 10px;
 }
 
 #menu .active {
     color: #f06c64;
+    
 }
 #menu li:not(.active):hover {
     cursor: pointer;
-    text-decoration: underline;
+   /* text-decoration: underline;
     /* color: #f06c64;*/
 }
 
 
-.slider-block{
-    margin-top:95px;
-    /*width: 1020px;*/
-    margin-left: 0px;
-    padding-left: 0px;
-    top: 0;
+.slider-block {
+    top: 95px;
+    position: relative;
+    background: #f06c64;
+	border-bottom: 6px solid #ea676b;
+	height: 595px;
+	display: flex;
+	align-items: center;
+    overflow: hidden;
     width: 1020px;
-    background-color: #f06c64;
-    height: 600px;
-    border-bottom: 15px solid #ea676b;
-}
-.left-arrow{
-    padding-left: 39.5px;
-    margin-top: 281px;
-    margin-bottom:292px;
-    vertical-align: center;
-}
-.right-arrow{
-    margin-top: 281px;
-    margin-bottom:292px;
-    margin-right: 38px;
-    vertical-align: center;
 }
 
-.slider-block .right-arrow:hover, .slider-block .left-arrow:hover {
+.slider-block_arrows {
+    position: absolute;
+    width: 16px;
+	height: 27px;
+	top: 281px;
+	z-index: 5;
+	filter: none;
+}
+
+.left-arrow {
+	margin-left: 39px;
+}
+
+.right-arrow {
+	margin-left: 965px;
+}
+
+.slider-block_arrows:hover {
     cursor: pointer;
     filter: brightness(10);
 }
 
-.shadow-vert{
-    box-shadow: 26px 26px 2px #cf5c55;
-    
-    
+.slider-block-iphones {
+	position: absolute;
+	border-radius: 27px;
+	box-shadow: 25px 25px #cf5c55;
+	z-index: 2;
 }
-.shadow-horiz{
-    box-shadow: 26px 26px 2px #cf5c55;
+
+.slider-block-iphones:hover {
+	cursor: pointer;
 }
-.vert-iphone{
-    margin-top: 48px;
-    margin-left: 51px;
-    margin-right: 94px;
-    border-radius: 27px;
-    margin-bottom: 89px;
+
+.vert-iphone {
+    width: 215px;
+    height: 458px;
+    left: 115px;
+	top: 53px;
 }
-.horiz-iphone{
-    margin-right: 77px;
-    margin-top: 169.5px;
-    margin-bottom:211px;
-    border-radius: 27px;
+.horiz-iphone {
+    height: 215px;
+    width: 458px;
+	top: 174px;
+    right: 55px;
+}
+
+
+.slide {
+	display: flex;
+	width: 940px;
+    position: absolute;
+	top: 0px;
+    height: 601px;
+    transition: 1.5s;
 }
 
 .services-block{
     padding-left: 40px;
     padding-right: 40px;
-    top: 695px;
-    bottom:1195px;
+    margin-top: 95px;
+    /*bottom:1195px;*/
     /*position: absolute;*/
     width: 1020px;
     height: 501px;
@@ -315,8 +337,12 @@ header {
     padding-left: 7.5px;
     margin-right: 6px;
     width: 29px;  
-    color:white;
-    border-color: white;
+    /*color:white;
+    border-color: white;*/
+}
+
+button,button:active, button:focus{
+    outline: none;
 }
 
 .portfolio__buttons button:nth-child(2){
@@ -348,6 +374,17 @@ header {
     grid-column-gap: 20px;
     text-align: justify;
 }
+
+.portfolio__buttons .button_active {
+    color: white;
+    border-color: white;
+}
+.portfolio__buttons button:not(.button_active):hover {
+    cursor: pointer;
+   /* text-decoration: underline;
+    /* color: #f06c64;*/
+}
+
 .portfolio__grid-container img:nth-child(n+13) {
     display: none;
  }
@@ -356,8 +393,13 @@ header {
     height: 187px;
 }
 
+#portfolio_images .active_img{
+    border: 5px solid #F06C64;
+}
+#portgolio_images img:not(.active_img):hover {
+    cursor: pointer;
+ }
 .about-us{
-    /*position:absolute;*/
     /*top: 870px;*/
     width: 1020px;
     height: 734px;
@@ -546,7 +588,6 @@ input::-webkit-input-placeholder{
     text-align: left;
     height: 11px;
 }
-            
 
 .contact_description{
     margin-top: 18px;
@@ -557,13 +598,34 @@ input::-webkit-input-placeholder{
     font-weight: 400;
     letter-spacing: -0.2px;
     text-align: justify;
-        
- }
+    
+}
 
 
-.icon_name_style{
-    margin: 0px;
-    font-size: 12px;
+/*#message-block.hidden{
+    /* display: none;*/
+    
+    /*
+    #message{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        border: 2px solid black;
+        text-align: center;
+    }
+    
+    #message-block{
+       /* position: absolute;
+        height: 500px;
+        left: 50px;
+        top: 0;
+        left: 0;
+        background: black
+    }*/
+    
+    .icon_name_style{
+        margin: 0px;
+        font-size: 12px;
     line-height: 21.8px;
     font-family: "Lato";
     font-weight: 400;
@@ -633,10 +695,73 @@ input::-webkit-input-placeholder{
     background-color:lightgrey;
 }
 
-/*#message-block:hidden{
-    
-}*/
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 300;
+}
 
+.display-none {
+    display: none;
+}
+
+#message-block {
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0008;
+    
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+  
+  #message-block.display-none {
+    display: none;
+  }
+  
+  #message {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 300px;
+    height: 200px;
+    border: 5px solid #f0d8d9;
+    background-color:  #f0d8d9;;
+    color: #e04744;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+#message p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 280px;
+}
+#message button{
+      border: none;
+      background-color: #e04744;
+      margin: 20px;
+      padding: 5px;
+      color: #f0d8d9;
+      text-align: center;
+      font-size: 1.4em;
+      border-radius: 5px;
+}
+
+
+
+
+  
 
 
 
