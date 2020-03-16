@@ -8,7 +8,7 @@
 
 html{
     font-size: 10px;
-    scroll-margin-top: 95px;
+    
 }
 
 body{
@@ -151,7 +151,6 @@ header {
 
 .slider-block_arrows:hover {
     cursor: pointer;
-    filter: brightness(10);
 }
 
 .slider-block-iphones {
