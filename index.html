@@ -2,43 +2,41 @@
 <html lang="en"> 
 <html lang="ru"> 
 <head> 
-<meta charset="utf-8"> 
-<link href="assets/fonts/fonts.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
+    <meta charset="utf-8"> 
+    <link href="assets/fonts/fonts.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        
-        <h1 class="logo">Singolo<span>*</span></h1>
+    <header class="menu"  id="menu">        
+        <h1 class="logo">Singolo<span>*</span></h1>     
         <nav class="header-nav">
-            <ul class="navigation" id="menu">
-                <li  class="active"><a href="#slider">Home</a></li>
+            <ul class="navigation" >
+                <li><a class="active" href="#home">Home</a></li>
                 <span class="list">&middot;</li>
-                    <li><a href="#services">Services</a></li>
-                    <span class="list">&middot;</li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <span class="list">&middot;</li>
-                            <li><a href="#about">About</a></li>
-                            <span class="list">&middot;</li>
-                                <li><a href="#contact">Contact</a></li>                                                     
-                            </ul>
-                            
-        </nav>
+                <li><a href="#services">Services</a></li>
+                <span class="list">&middot;</li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <span class="list">&middot;</li>
+                <li><a href="#about">About</a></li>
+                <span class="list">&middot;</li>
+                <li><a href="#contact">Contact</a></li>                                                     
+            </ul>
+        </nav>                       
     </header>
     <main>
-        <section class="slider-block" id="slider">
-            <div class="wrapper">
-				<img class="slider-block_arrows left-arrow "src="assets/images/left.png" onclick="changeSlide()">
-				<div class="slide slide_red">
+        <section class="slider  slider-block  carousel" id='slider-section home'>
+            <div class="slider-content item-container" id='slides'>
+				<img class="slider-block_arrows left-arrow "src="assets/images/left.png">
+				<div class="slide slide_red item active">
                     <img src="assets/images/vertical_iphone.png" class="slider-block-iphones shadow vert-iphone  slide_red" onclick="clickOnVertPhone()">
                     <img src="assets/images/iPhone Vertical.png" class="slider-block-iphones shadow vert-iphone slide_red display-none" onclick="clickOnVertPhone()">
                     <img src="assets/images/horizontal_iphone.png" class="slider-block-iphones shadow horiz-iphone  slide_red" onclick="clickOnHorizPhone()">
                     <img src="assets/images/iPhone Horizontal.png" class="slider-block-iphones shadow horiz-iphone display-none slide_red" onclick="clickOnHorizPhone()">
 				</div>
-				<div class="slide display-none slide_blue">
+				<div class="slide item slide_blue">
 					<img src="assets/images/slide-2.png" class=>
 				</div>
-                <img class="slider-block_arrows right-arrow" src="assets/images/right.png" onclick="changeSlide()">
+                <img class="slider-block_arrows right-arrow" src="assets/images/right.png">
 			</div>
         </section>
         <section class="services-block" id="services">
@@ -166,13 +164,13 @@
                 <h2>Get a Quote</h2>
                 <p class="get-quote__text" >Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                  <div class="get-quote_grid-container">
-                <form class="get-quote__form">
-                    <input class="form__element"  type="text" name="name" placeholder="Name (Required)" required>
-                    <input class="form__element" type="email" name="email" placeholder="Email (Required)" required>
-                    <input class="form__element" type="text" name="subject" placeholder="Subject">
-                    <textarea class="form__textarea" name="description"
+                <form class="get-quote__form" id="form">
+                    <input class="form__element"  type="text" name="name" placeholder="Name (Required)" id="name" required>
+                    <input class="form__element" type="email" name="email" placeholder="Email (Required)" id="email" required>
+                    <input class="form__element" type="text" name="subject" placeholder="Subject" id="subject">
+                    <textarea class="form__textarea" name="description" id="description"
                       placeholder="Describe your project in detail..."></textarea>
-                    <p><button type="submit" class="get-quote__button">Submit</button></p>
+                    <p><button type="submit" class="get-quote__button" id="btn">Submit</button></p>
                 </form>
             
                 <div class="contact">
@@ -197,7 +195,9 @@
                <button id="close_btn">OK</button>
             </div>
         </div>
+    
         <script src="script.js"></script>
+   
     </main>
     <footer class="footer">
         <div class="footer__wrapper">
