@@ -7,17 +7,25 @@ const PHONE_VERT=document.getElementsByClassName('vert-iphone');
 const PHONE_HORIZ=document.getElementsByClassName('horiz-iphone');
 const SLIDER_BLOCK = document.getElementById('home');
 const SLIDER_ARROW = document.getElementsByClassName('slider-block_arrows');
-const ANCHORS= document.querySelectorAll('a[href*="#"]')
+const ANCHORS= document.querySelectorAll('.menu a[href*="#"]')
 
 //change slides
 
 let slides = document.querySelectorAll('.item');
 let currentSlide = 0;
 let isEnabled = true;
-console.log(slides);
+
 
 function changeCurrentSlide(n) {
     currentSlide = (n + slides.length) % slides.length;
+    if(currentSlide%2!=0){
+        document.getElementById('home').style.backgroundColor = "#648BF0";
+        //document.getElementById('home').style.borderBottom="";
+    }
+    else {
+        document.getElementById('home').style.backgroundColor = "#f06c64";
+        //document.getElementById('home').style.borderBottom="";
+    }
 }
 
 function hideSlide(direction) {
@@ -32,7 +40,7 @@ function showSlide(direction) {
     slides[currentSlide].classList.add('next', direction);
     slides[currentSlide].addEventListener('animationend', function() {
         this.classList.remove('next', direction);
-        console.log(this);
+        //console.log(this);
         this.classList.add('slide_active');
         if(!slides[currentSlide].classList.contains("slide_blue")){
             SLIDER_ARROW[0].style.filter='grayscale(0%)';
@@ -77,14 +85,14 @@ function clickOnHorizPhone(){
     {
             PHONE_HORIZ[0].classList.remove("display-none");
             PHONE_HORIZ[1].classList.add("display-none");
-            console.log(PHONE_HORIZ[0]);
+            //console.log(PHONE_HORIZ[0]);
             
         }
         else
         {
             PHONE_HORIZ[1].classList.remove("display-none");
             PHONE_HORIZ[0].classList.add("display-none");
-            console.log(PHONE_HORIZ[0]);
+            //console.log(PHONE_HORIZ[0]);
             
         }
     }
@@ -106,10 +114,10 @@ function clickOnHorizPhone(){
     }
 
 //scroll
-    
+    console.log(ANCHORS);
     for (let anchor of ANCHORS) {
       anchor.addEventListener('click', function (elem) {
-       // elem.preventDefault()
+       elem.preventDefault()
         const link = anchor.getAttribute('href').substr(1);
                
         if(elem==link){
@@ -139,7 +147,7 @@ function onScroll(event){
                 a.classList.remove('active');
 
                 if(el.getAttribute('id')==a.getAttribute('href').substring(1)){
-                    console.log(a.classList);
+                    //console.log(a.classList);
                     a.classList.add('active');
                     
                 }
@@ -183,9 +191,7 @@ BUTTON_PORTF.addEventListener('click', (event) => {
     BUTTON_PORTF.querySelectorAll('button').forEach(el => el.classList.remove('button_active'));
     event.target.classList.add('button_active');
     let slides=POPRTFIMG.querySelectorAll('img');
-    console.log(slides.length);
     let size=items.length;
-    console.log(POPRTFIMG.length);
     //let randomChange;
     arrayImg=[];
     for(let i=0; i<size;i++)

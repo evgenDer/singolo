@@ -3,47 +3,55 @@
 <html lang="ru"> 
 <head> 
     <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/fonts/fonts.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <header class="menu"  id="menu">        
-        <h1 class="logo">Singolo<span>*</span></h1>     
-        <nav class="header-nav">
+    <header class="menu"  id="menu">  
+        <div class="wrapper">  
+               
+            <h1 class="logo">Singolo<span>*</span></h1>     
+            <nav class="header-nav">
             <ul class="navigation" >
                 <li><a class="active" href="#home">Home</a></li>
-                <span class="list">&middot;</li>
+                <span class="list">&middot;</span>
                 <li><a href="#services">Services</a></li>
-                <span class="list">&middot;</li>
+                <span class="list">&middot;</span>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <span class="list">&middot;</li>
+                <span class="list">&middot;</span>
                 <li><a href="#about">About</a></li>
-                <span class="list">&middot;</li>
+                <span class="list">&middot;</span>
                 <li><a href="#contact">Contact</a></li>                                                     
             </ul>
-        </nav>                       
+        </nav> 
+    </div>                       
     </header>
     <main>
-        <section class="slider slider-block" id='home'>
+        <section class="slider-block" id='home'>
+            <div class="wrapper">
+            
             <img class="slider-block_arrows left-arrow "src="assets/images/left.png">
             <div class="slider-content item-container" id='slides'>
-				<div class="slide slide_red item slide_active" id="slide-red">
+                <div class="slide slide_red item slide_active" id="slide-red">
                     <img src="assets/images/vertical_iphone.png" class="slider-block-iphones shadow vert-iphone  slide_red" onclick="clickOnVertPhone()">
                     <img src="assets/images/iPhone Vertical.png" class="slider-block-iphones shadow vert-iphone slide_red display-none" onclick="clickOnVertPhone()">
                     <img src="assets/images/horizontal_iphone.png" class="slider-block-iphones shadow horiz-iphone  slide_red" onclick="clickOnHorizPhone()">
                     <img src="assets/images/iPhone Horizontal.png" class="slider-block-iphones shadow horiz-iphone display-none slide_red" onclick="clickOnHorizPhone()">
 				</div>
-				<div class="slide item slide_blue" id="slide-blue">
-                    <img src="assets/images/slide-2.png">
-				</div>
+                    <div class="slide item slide_blue" id="slide-blue">
+                        <img src="assets/images/slide-2.png">
+                    </div>
 			</div>
                 <img class="slider-block_arrows right-arrow" src="assets/images/right.png">
+               </div>
         </section>
         <section class="services-block" id="services">
             <div class ="wrapper">
+                <div>
                 <h2>Our Services</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
-                    <text style="letter-spacing: -0.24px;">ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
+                    ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
                         <div class="services-container">
                             <div class="grid-item">
                                 <img src="assets/images/pen.png">
@@ -77,6 +85,7 @@
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae,  viverra nibh. Fusce vitae aliquam tellus.</p>
                     </div>
                 </div>
+                
             </div>
         </section>
     </div>
@@ -114,10 +123,11 @@
 </section>
 <section class="about-us" id="about">
     <div class="wrapper">
+        <div class="about-us_container">
         <h2>About Us</h2>
-        <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo,<text style="letter-spacing: -0.02px;"> tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget</text><text style="letter-spacing: -0.3px;"> lacinia odio sem nec elit.
-            Fusce dapibus, tellus ac cursus commado,</text><text style="letter-spacing: 0px;"> tortor mauris condimentum nibh.</text></p>
-            <div class="layot-4-column">
+        <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+            Fusce dapibus, tellus ac cursus commado, tortor mauris condimentum nibh.</text></p>
+            <div class="layot-3-column">
                 <div class="about-us__grid-container">
                     <div>
                         <img src="assets/images/Adam.png" alt="Adam Jensen">
@@ -157,6 +167,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
         <section class="get-quote" id="contact">
             <div class="wrapper">
@@ -195,10 +206,9 @@
                <button id="close_btn">OK</button>
             </div>
         </div>
-    
-        <script src="script.js"></script>
-   
     </main>
+    
+    
     <footer class="footer">
         <div class="footer__wrapper">
             <span class="footer__span">&copy; Copyright 2013</span>
@@ -212,3 +222,4 @@
     </footer>
 </body> 
 </html>
+<script src="script.js"></script>
