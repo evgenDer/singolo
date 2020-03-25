@@ -200,7 +200,7 @@ BUTTON_PORTF.querySelectorAll('button');
 BUTTON_PORTF.addEventListener('click', (event) => {
     BUTTON_PORTF.querySelectorAll('button').forEach(el => el.classList.remove('button_active'));
     event.target.classList.add('button_active');
-    let slides=POPRTFIMG.querySelectorAll('img');
+    let items=POPRTFIMG.querySelectorAll('img');
     let size=items.length;
     //let randomChange;
     arrayImg=[];
