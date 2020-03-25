@@ -1213,7 +1213,7 @@ input::-webkit-input-placeholder{
   display: flex; 
   align-items: center;  
   position: fixed;
-  top: 2.5%;
+  top: 24px;
   left: 20px;
   width: 26px;
   height: 26px;
@@ -1279,7 +1279,7 @@ input::-webkit-input-placeholder{
 }
 
 .menu__logo{
-    margin-top: 25%;
+    margin-top: 24px;
     margin-bottom: 200px;
     display: block;
     width: 140px;
