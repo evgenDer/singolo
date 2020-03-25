@@ -151,14 +151,24 @@ function onScroll(event){
                     a.classList.add('active');
                     
                 }
-                if(!el.contains(home)){
+                if(window.matchMedia('(max-width: 768px)').matches){
+                    if(!el.contains(home)){
+                        document.getElementById('menu').style.opacity = '1 ';
+                        document.getElementById('menu').style.height = '72px';
+                    }
+                    else{
+                        document.getElementById('menu').style.opacity = '1';
+                        document.getElementById('menu').style.height = '72px';
+                    }
+                }
+                else { if(!el.contains(home)){
                     document.getElementById('menu').style.opacity = '0.5 ';
                     document.getElementById('menu').style.height = '80px';
                 }
                 else{
                     document.getElementById('menu').style.opacity = '1';
                     document.getElementById('menu').style.height = '95px';
-                }
+                }}
             });
         }
     });
