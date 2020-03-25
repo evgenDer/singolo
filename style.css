@@ -902,11 +902,6 @@ input::-webkit-input-placeholder{
         margin-top: -0.5px;
         padding-right: 10px;
     }
-
-    .menu{
-        width: relative;
-        height: 95px;
-    }
 }
 
 @media(max-width: 768px){
@@ -1195,8 +1190,7 @@ input::-webkit-input-placeholder{
 }
 
 .footer__wrapper{
-    min-width: 1020px;
-    width: 50%;
+    width: 100%;
     align-items: center; 
     display: flex;
     justify-content: space-between;
@@ -1219,7 +1213,7 @@ input::-webkit-input-placeholder{
   display: flex; 
   align-items: center;  
   position: fixed;
-  top: 4.5%;
+  top: 2.5%;
   left: 20px;
   width: 26px;
   height: 26px;
