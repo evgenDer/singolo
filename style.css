@@ -1201,12 +1201,14 @@ input::-webkit-input-placeholder{
      width: 100%;
     text-align: center;
     padding-top: 23px;
+    padding-right: 0px;
 }
 
 .footer__span{
     display:none;
        
 }
+
 
 
 .menu__btn {
