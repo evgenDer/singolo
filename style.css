@@ -221,6 +221,7 @@ h3{
     letter-spacing: -0.0029em;
     height:57px;
     margin-top:-3px;
+    margin-right: 40px;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
@@ -619,8 +620,7 @@ input::-webkit-input-placeholder{
 .wrapper {
     width: 1020px;
     margin: 0 auto;
-
-}
+ }
  .icon_name_style{
         margin: 0px;
         font-size: 12px;
@@ -654,6 +654,7 @@ input::-webkit-input-placeholder{
 }
 
 .footer__wrapper{
+    width: 100%;
     align-items: center; 
     display: flex;
     justify-content: space-between;
@@ -759,22 +760,29 @@ input::-webkit-input-placeholder{
 
 
 @media(max-width: 1020px){
+
     .logo {
         float: left; 
         position: absolute;
-        padding-left: 40px;
+        padding-top: 35px;
     }
-  
-    .header-nav{
-        padding-left: 40px;
+ 
+    #menu{
+        margin-left: 0px;
+        width: 100vw; 
+    }
+    .navigation{
+        margin-bottom: 30px;
+        margin-left: 0px;
     }
 
     .wrapper{
-        max-width: 1020px;
-        width:100%;
-        margin: 0 auto;
+            margin: 0;
+            width: auto;
+            overflow-x: hidden;
+           
     }
-
+  
     .slider-block {
         top: 95px;
         position: relative;
