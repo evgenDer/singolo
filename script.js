@@ -1,5 +1,5 @@
 const MENU=document.getElementById('menu');
-const POPRTFIMG=document.getElementById('portfolio_images');
+const PORTFIMG=document.getElementById('portfolio_images');
 const BUTTON_PORTF=document.getElementById('portfolio__buttons');
 const BUTTON=document.getElementById('btn');
 const BUTTON_CLOSE=document.getElementById('close_btn');
@@ -203,17 +203,17 @@ MENU_TOGGLE.onclick=function(){
 
 //change images
 
-POPRTFIMG.querySelectorAll('img');
+PORTFIMG.querySelectorAll('img');
 
-POPRTFIMG.addEventListener('click', (event) => {
-    POPRTFIMG.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
+PORTFIMG.addEventListener('click', (event) => {
+    PORTFIMG.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
     event.target.classList.add('active_img');
 
 });
 
 
-POPRTFIMG.addEventListener('click', (event) => {
-    POPRTFIMG.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
+PORTFIMG.addEventListener('click', (event) => {
+    PORTFIMG.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
     event.target.classList.add('active_img');
     
 });
@@ -225,32 +225,24 @@ BUTTON_PORTF.querySelectorAll('button');
 BUTTON_PORTF.addEventListener('click', (event) => {
     BUTTON_PORTF.querySelectorAll('button').forEach(el => el.classList.remove('button_active'));
     event.target.classList.add('button_active');
-    let items=POPRTFIMG.querySelectorAll('.portfolio__grid-container>img');
+    let items=PORTFIMG.querySelectorAll('.portfolio__grid-container>img');
     let size=items.length;
     //let randomChange;
     arrayImg=[];
     for(let i=0; i<size;i++)
     {
         console.log(items[i]);
-        arrayImg.push(items[i].src);
+        arrayImg.push(items[i]);
     }
     arrayImg.reverse();
     let position=0;
-    for(let j=0; j<size;j++){
-        console.log(items[j]);
-        console.log(arrayImg[j]);
-        if(items[j].classList.contains('active_img')){
-            position=j;
-            items[j].classList.remove('active_img');
-            items[j].src=arrayImg[j];
-        }
-        else {
-            items[j].src=arrayImg[j];
-        }
-    }
-    console.log(items[size-position]);
-    items[size-position-1].classList.add('active_img');
+
+    arrayImg.forEach((item, index) => {
+        PORTFIMG.appendChild(arrayImg[index]);
+        item.classList.remove("active_img");
     });
+});
+   
    
  //add forms   
 
