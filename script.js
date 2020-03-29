@@ -1,5 +1,5 @@
 const MENU=document.getElementById('menu');
-const PORTFIMG=document.getElementById('portfolio_images');
+const POPRTFIMG=document.getElementById('portfolio_images');
 const BUTTON_PORTF=document.getElementById('portfolio__buttons');
 const BUTTON=document.getElementById('btn');
 const BUTTON_CLOSE=document.getElementById('close_btn');
@@ -128,7 +128,7 @@ function clickOnHorizPhone(){
         
         document.getElementById(link).scrollIntoView({
           behavior: 'smooth',
-          block: 'center'
+          block: 'start',
         })
       })
     }
@@ -142,7 +142,7 @@ function onScroll(event){
     document.querySelectorAll('main>section').forEach((el) => {
          el.getAttribute('id');
        
-        let temp=(el.offsetTop)-110;
+        let temp=(el.offsetTop)-10;
         if( temp<=curPos && (el.offsetTop+el.offsetHeight)>curPos){
             links.forEach((a)=>{
                 a.classList.remove('active');
@@ -151,20 +151,20 @@ function onScroll(event){
                     //console.log(a.classList);
                     a.classList.add('active');
                 }
-                if(window.matchMedia('(max-width: 768px)').matches){
+                if(window.matchMedia('(max-width: 767.9px)').matches){
                     if(MENU_TOGGLE.checked)
                         {
                             MENU_TOGGLE.checked=0;
                             
                        }
                     if(!el.contains(home)){
-                        document.getElementById('menu').style.opacity = '0.5 ';
                         document.getElementById('menu').style.height = '60px';
+                        document.getElementById('menu').style.opacity = '1 ';
                     }
                     else{
                         document.getElementById('menu').style.opacity = '1';
                         document.getElementById('menu').style.height = '72px';
-                    }
+             }
 
         
         }
@@ -172,7 +172,7 @@ function onScroll(event){
         
         else { if(!el.contains(home)){
             document.getElementById('menu').style.opacity = '0.5 ';
-            document.getElementById('menu').style.height = '80px';
+            document.getElementById('menu').style.height = '85px';
         }
         else{
             document.getElementById('menu').style.opacity = '1';
@@ -203,17 +203,17 @@ MENU_TOGGLE.onclick=function(){
 
 //change images
 
-PORTFIMG.querySelectorAll('img');
+POPRTFIMG.querySelectorAll('img');
 
-PORTFIMG.addEventListener('click', (event) => {
-    PORTFIMG.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
+POPRTFIMG.addEventListener('click', (event) => {
+    POPRTFIMG.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
     event.target.classList.add('active_img');
 
 });
 
 
-PORTFIMG.addEventListener('click', (event) => {
-    PORTFIMG.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
+POPRTFIMG.addEventListener('click', (event) => {
+    POPRTFIMG.querySelectorAll('img').forEach(el => el.classList.remove('active_img'));
     event.target.classList.add('active_img');
     
 });
@@ -225,24 +225,32 @@ BUTTON_PORTF.querySelectorAll('button');
 BUTTON_PORTF.addEventListener('click', (event) => {
     BUTTON_PORTF.querySelectorAll('button').forEach(el => el.classList.remove('button_active'));
     event.target.classList.add('button_active');
-    let items=PORTFIMG.querySelectorAll('.portfolio__grid-container>img');
+    let items=POPRTFIMG.querySelectorAll('.portfolio__grid-container>img');
     let size=items.length;
     //let randomChange;
     arrayImg=[];
     for(let i=0; i<size;i++)
     {
         console.log(items[i]);
-        arrayImg.push(items[i]);
+        arrayImg.push(items[i].src);
     }
     arrayImg.reverse();
     let position=0;
-
-    arrayImg.forEach((item, index) => {
-        PORTFIMG.appendChild(arrayImg[index]);
-        item.classList.remove("active_img");
+    for(let j=0; j<size;j++){
+        console.log(items[j]);
+        console.log(arrayImg[j]);
+        if(items[j].classList.contains('active_img')){
+            position=j;
+            items[j].classList.remove('active_img');
+            items[j].src=arrayImg[j];
+        }
+        else {
+            items[j].src=arrayImg[j];
+        }
+    }
+    console.log(items[size-position]);
+    items[size-position-1].classList.add('active_img');
     });
-});
-   
    
  //add forms   
 
