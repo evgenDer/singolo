@@ -658,6 +658,9 @@ input::-webkit-input-placeholder{
 }
 
 .footer__wrapper{
+    margin: auto;
+    max-width: 1020px;
+    text-align: center;
     width: 100%;
     align-items: center; 
     display: flex;
@@ -907,6 +910,14 @@ input::-webkit-input-placeholder{
         border-bottom: 6px solid #ea676b;
         margin-top: -0.5px;
         padding-right: 10px;
+    }
+    .footer__wrapper{
+        width: 100%;
+        align-items: center; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
     }
 }
 
