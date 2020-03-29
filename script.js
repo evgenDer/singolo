@@ -1,6 +1,7 @@
 const MENU=document.getElementById('menu');
 const POPRTFIMG=document.getElementById('portfolio_images');
 const BUTTON_PORTF=document.getElementById('portfolio__buttons');
+const FORM=document.getElementById('form');
 const BUTTON=document.getElementById('btn');
 const BUTTON_CLOSE=document.getElementById('close_btn');
 const PHONE_VERT=document.getElementsByClassName('vert-iphone');
@@ -251,10 +252,12 @@ BUTTON_PORTF.addEventListener('click', (event) => {
     console.log(items[size-position]);
     items[size-position-1].classList.add('active_img');
     });
-   
- //add forms   
+    
+    //add forms   
+        
+    FORM.addEventListener('submit', (event)=>{
+        event.preventDefault();
 
-BUTTON.addEventListener('click', (event)=>{
         let subject = document.getElementById('subject').value.toString();
         let describe = document.getElementById('description').value.toString();
         if(subject.length==0){
@@ -270,10 +273,11 @@ BUTTON.addEventListener('click', (event)=>{
             document.getElementById('text-describe').innerText = 'Описание:'+ ' '+describe;
         }
         if (document.getElementById('name').checkValidity() && document.getElementById('email').checkValidity()){
-            document.getElementById('message-block').classList.remove('display-none')
+
+            document.getElementById('message-block').classList.remove('display-none');
         }
+            
         
-        event.preventDefault();
 });
 
 // close button of form message
@@ -283,4 +287,4 @@ BUTTON_CLOSE.addEventListener('click', ()=>{
     document.getElementById('text-describe').innerText = '';
     document.getElementById('form').reset ();
     document.getElementById('message-block').classList.add('display-none');
-});	
+});
